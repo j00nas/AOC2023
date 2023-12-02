@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Aoc2023DayXX {
 	public String getInputDataPath() {
-		return "src/main/java/resource/AOC2023/" + this.getClass().getSimpleName() + ".txt";
+		return "src/main/java/resources/AOC2023/" + this.getClass().getSimpleName() + ".txt";
 	}
 	
 	public List<String> getInputData(){
