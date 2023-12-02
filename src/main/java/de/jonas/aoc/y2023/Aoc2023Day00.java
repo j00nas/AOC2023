@@ -1,11 +1,11 @@
-package main.java.de.jonas.adventofcode.y2023;
+package main.java.de.jonas.aoc.y2023;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
-public class Aoc2023DayXX {
+public class Aoc2023Day00 {
 	public String getInputDataPath() {
 		return "src/main/java/resources/AOC2023/" + this.getClass().getSimpleName() + ".txt";
 	}

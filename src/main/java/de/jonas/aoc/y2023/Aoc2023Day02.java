@@ -1,6 +1,6 @@
-package main.java.de.jonas.adventofcode.y2023;
+package main.java.de.jonas.aoc.y2023;
 
-public class Aoc2023Day02 extends Aoc2023DayXX implements DailySolution {
+public class Aoc2023Day02 extends Aoc2023Day00 implements DailySolution {
 	/*
 	 * AOC2023
 	 * Day 2: Cube Conundrum

@@ -1,4 +1,4 @@
-package main.java.de.jonas.adventofcode.y2023;
+package main.java.de.jonas.aoc.y2023;
 
 public class Main {
 	public static void main(String[] args){
@@ -10,7 +10,6 @@ public class Main {
 		//myAoc2023Day01.printSolution();
 		
 		Aoc2023Day02 myAoc2023Day02 = new Aoc2023Day02();
-		myAoc2023Day02.printSolution();
-		
+		myAoc2023Day02.printSolution();		
 	}
 }

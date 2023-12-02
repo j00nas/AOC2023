@@ -1,10 +1,10 @@
-package main.java.de.jonas.adventofcode.y2023;
+package main.java.de.jonas.aoc.y2023;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
-public class Aoc2023Day01 extends Aoc2023DayXX implements DailySolution {
+public class Aoc2023Day01 extends Aoc2023Day00 implements DailySolution {
 	/*
 	 * AOC2023
 	 * Day 1: Trebuchet?!

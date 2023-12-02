@@ -1,4 +1,4 @@
-package main.java.de.jonas.adventofcode.y2023;
+package main.java.de.jonas.aoc.y2023;
 
 import java.util.List;
 
