@@ -25,8 +25,7 @@ public class Aoc2023Day02 extends Aoc2023DayXX implements DailySolution {
 			String[] eachHand = eachHandfull[1].split(";");
 			
 			for(String s : eachHand) {
-				String[] eachHandColor = s.split(";");
-				String[] eachHandColorNumber = eachHandColor[0].split(",");
+				String[] eachHandColorNumber = s.split(",");
 
 				for(String s2 : eachHandColorNumber) {
 					String[] eachHandColorNumberSingle = s2.split(" ");
