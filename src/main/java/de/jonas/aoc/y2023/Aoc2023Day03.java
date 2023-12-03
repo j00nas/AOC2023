@@ -107,9 +107,9 @@ public class Aoc2023Day03 extends Aoc2023Day00 implements DailySolution {
 		boolean numberCounts = false;
 		int ans = 0;
 		
-		HashMap<Integer[], Integer[]> starHashmap = new HashMap<Integer[], Integer[]>();
+		HashMap<String, Integer[]> starHashmap = new HashMap<String, Integer[]>();
 		//ArrayList<Integer> TempStarCoordinates = new ArrayList<Integer>();
-		HashMap<ArrayList<Integer>, Integer> TempStarCoordinates = new HashMap<ArrayList<Integer>, Integer>();
+		HashMap<String, Integer> TempStarCoordinates = new HashMap<String, Integer>();
 				
 		for(int i = 0; i < engineMap.size(); i++) {
 			for(int j = 0; j < engineMap.get(0).size(); j++) {
@@ -173,32 +173,17 @@ public class Aoc2023Day03 extends Aoc2023Day00 implements DailySolution {
 					}					
 				}else {		
 					if(numberCounts) {							
-						for(ArrayList<Integer> coordinates : TempStarCoordinates.keySet()) {							
-							Integer[] tempCoordinates = {coordinates.get(0), coordinates.get(1)};
-							
-							if(starHashmap.isEmpty()) {
-								Integer[] newEntry = {Integer.parseInt(possNumber)};
-								starHashmap.put(tempCoordinates, newEntry);
-							}else{							
-								for(Integer[] starHashmapEntries : starHashmap.keySet()) {
-									if(starHashmapEntries[0].equals(tempCoordinates[0]) && starHashmapEntries[1].equals(tempCoordinates[1])) {									
-										if(starHashmap.get(tempCoordinates) != null) {
-											Integer[] newEntry = new Integer[starHashmap.get(tempCoordinates).length + 1];
-											for(int k = 0; k < starHashmap.get(tempCoordinates).length; k++) {
-												newEntry[k] = starHashmap.get(tempCoordinates)[k];
-											}									
-											newEntry[starHashmap.get(tempCoordinates).length] = Integer.parseInt(possNumber);
-											starHashmap.put(tempCoordinates, newEntry);
-										}else {
-											Integer[] newEntry = {Integer.parseInt(possNumber)};
-											starHashmap.put(tempCoordinates, newEntry);
-										}									
-									}else {
-										Integer[] newEntry = {Integer.parseInt(possNumber)};
-										starHashmap.put(tempCoordinates, newEntry);
-									}
-								}
-							}						
+						for(String coordinates : TempStarCoordinates.keySet()) {							
+							//System.out.println(coordinates + " " + possNumber);
+							if(starHashmap.containsKey(coordinates)) {
+								Integer[] newEntry = new Integer[starHashmap.get(coordinates).length + 1];
+								newEntry[starHashmap.get(coordinates).length] = Integer.parseInt(possNumber);
+								starHashmap.put(coordinates, newEntry);
+							}else {
+								Integer[] newEntry = new Integer[1];
+								newEntry[0] = Integer.parseInt(possNumber);								
+								starHashmap.put(coordinates, newEntry);
+							}					
 						}
 					}
 					TempStarCoordinates.clear();
@@ -207,8 +192,8 @@ public class Aoc2023Day03 extends Aoc2023Day00 implements DailySolution {
 				}
 			}
 		}
-		for(Integer[] test : starHashmap.keySet()) {
-			System.out.print("i = " + test[0] + " j = " + test[1] + "   ");
+		for(String test : starHashmap.keySet()) {
+			System.out.print(test);
 			for(int i : starHashmap.get(test)) {
 				System.out.print(i);
 			}
@@ -219,10 +204,8 @@ public class Aoc2023Day03 extends Aoc2023Day00 implements DailySolution {
 		System.out.println(ans);
 	}	
 	
-	public void putTempStarCoordinates(HashMap<ArrayList<Integer>, Integer> tempStar, Integer i, Integer j) {
-		ArrayList<Integer> temp = new ArrayList<Integer>();
-		temp.add(i);
-		temp.add(j);
+	public void putTempStarCoordinates(HashMap<String, Integer> tempStar, Integer i, Integer j) {
+		String temp = Integer.toString(i) + Integer.toString(j);
 		if(!tempStar.containsKey(temp)) {
 			tempStar.put(temp, null);
 		}
