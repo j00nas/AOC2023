@@ -6,7 +6,7 @@ import java.util.HashMap;
 public class Aoc2023Day04 extends Aoc2023Day00 implements DailySolution {
 	/*
 	 * AOC2023
-	 * Day 3: Gear Ratios
+	 * Day 4: Scratchcards
 	 */
 	
 	public void printSolution(){
