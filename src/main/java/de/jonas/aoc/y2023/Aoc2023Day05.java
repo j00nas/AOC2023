@@ -14,7 +14,7 @@ import java.util.List;
 public class Aoc2023Day05 extends Aoc2023Day00 implements DailySolution {
 	/*
 	 * AOC2023
-	 * Day 5: If You Give A Seed A Fertilizer
+	 * Day 6: Wait For It 
 	 */
 	
 	public void printSolution(){
