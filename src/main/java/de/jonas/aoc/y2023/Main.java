@@ -15,8 +15,14 @@ public class Main {
 		//Aoc2023Day03 myAoc2023Day03 = new Aoc2023Day03();
 		//myAoc2023Day03.printSolution();	
 		
-		Aoc2023Day04 myAoc2023Day04 = new Aoc2023Day04();
-		myAoc2023Day04.printSolution();	
+		//Aoc2023Day04 myAoc2023Day04 = new Aoc2023Day04();
+		//myAoc2023Day04.printSolution();	
+		
+		Aoc2023Day05 myAoc2023Day05 = new Aoc2023Day05();
+		myAoc2023Day05.printSolution();	
+		
+		//Aoc2023Day06 myAoc2023Day06 = new Aoc2023Day06();
+		//myAoc2023Day06.printSolution();	
 		
 	}
 }
