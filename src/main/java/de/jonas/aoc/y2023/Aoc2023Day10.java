@@ -1,7 +1,6 @@
 package main.java.de.jonas.aoc.y2023;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Aoc2023Day10 extends Aoc2023Day00 implements DailySolution {
 	/*
