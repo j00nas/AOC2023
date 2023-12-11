@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Aoc2023Day11 extends Aoc2023Day00 implements DailySolution {
 	/*
 	 * AOC2023
-	 * Day 10: Pipe Maze
+	 * Day 11: Cosmic Expansion
 	 */
 	
 	public void printSolution(){
